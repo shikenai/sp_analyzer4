@@ -5,6 +5,7 @@ import pandas as pd
 from django.http import JsonResponse
 from django.shortcuts import redirect
 import json
+from myapp.models import GeneralSettings
 
 
 def test(request):
@@ -13,5 +14,10 @@ def test(request):
                          'key2': {'value2A': 1,
                                   'value2B': 2}})
 
+
 def home(request):
     return redirect("http://localhost:5173/")
+
+
+def general_settings(request):
+    return JsonResponse({"hello": "world"})

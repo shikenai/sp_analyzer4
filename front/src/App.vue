@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import GeneralSettings from './components/GeneralSettings.Vue'
 import axios from "axios";
 import {ref} from "vue";
 
@@ -27,7 +28,7 @@ const test = () => {
     <nav>
       <ul>
         <li><a href="http://localhost:8000/admin/">管理画面</a></li>
-        <li>2</li>
+        <li><a href="api/general_settings">設定一般</a></li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
@@ -35,6 +36,7 @@ const test = () => {
     </nav>
     <div id="contents">
         <div id="main"></div>
+          <GeneralSettings></GeneralSettings>
         <div id="left"></div>
         <div id="right"></div>
     </div>

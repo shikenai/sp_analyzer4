@@ -21,5 +21,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/test.json', views.test),
+    path('api/general_settings', views.general_settings),
     path('', views.home)
 ]
